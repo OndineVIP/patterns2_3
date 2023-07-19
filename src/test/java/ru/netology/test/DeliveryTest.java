@@ -29,7 +29,7 @@ class DeliveryTest {
         $("[name='name']").setValue(validUser.getName());
         $("[name='phone']").setValue(validUser.getPhone());
         $("[data-test-id='agreement']").click();
-        $$("[type='button']").find(Condition.exactText("Запланировать")).click();
+                $$("[type='button']").find(Condition.exactText("Запланировать")).click();
         $(".notification__content")
                 .shouldHave(Condition.text("Встреча успешно запланирована на " + firstMeetingDate), Duration.ofSeconds(15))
                 .shouldBe(Condition.visible);
